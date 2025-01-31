@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Donation Platform</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="loadPage('home')">Home</a></li>
+        <li><a href="#" onclick="loadPage('about')">About Us</a></li>
+        <li><a href="#" onclick="loadPage('how-it-works')">How It Works</a></li>
+        <li><a href="#" onclick="loadPage('donate')">Donate</a></li>
+        <li><a href="#" onclick="loadPage('request')">Request Food</a></li>
+        <li><a href="#" onclick="loadPage('contact')">Contact</a></li>
+        <li><a href="#" onclick="loadPage('faq')">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+
+
+
+  <div id="home" class="page-content">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to the Food Donation Platform!</h1>
+        <p>Help reduce food waste and feed those in need.</p>
+        <a href="#" class="btn" onclick="loadPage('donate')">Donate Food</a>
+        <a href="#" class="btn" onclick="loadPage('request')">Request Food</a>
+        <img src="b5be71a1-0d49-4340-84e6-004b792bbd19.jpg" alt="Hero Image" class="hero-image" style="height: 5%;">
+      </div>
+    </section>
+    <div id="counter-section">
+      <h1>Food Waste Reduction Tracker</h1>
+  
+      <div class="counter">
+          <h2>Food Donated</h2>
+          <div class="bar-container">
+              <div id="foodBar" class="bar"></div>
+          </div>
+          <p id="foodCount">0</p>
+          <button onclick="increment('food')">Donate Food</button>
+      </div>
+  
+      <div class="counter">
+          <h2>People Helped</h2>
+          <div class="bar-container">
+              <div id="peopleBar" class="bar"></div>
+          </div>
+          <p id="peopleCount">0</p>
+          <button onclick="increment('people')">Help a Person</button>
+      </div>
+    </div>
+    <script src="d.js"></script>
+  </div>
+
+
+
+
+
+  <div id="about" class="page-content" style="display:none;">
+    <section class="about">
+      <h2>About Us</h2>
+      <p>We are a platform dedicated to connecting restaurants, NGOs, and individuals to reduce food waste by donating surplus food to those in need. Our platform serves as a bridge to prevent good food from going to waste and to help feed people who may be struggling.</p>
+      <p>Our mission is to create a sustainable solution where everyone can contribute to reducing food waste, feeding the hungry, and creating a positive impact on society and the environment.</p>
+      <img src="f6376896-0bcd-4f16-97f7-ae062b695e04.jpg" alt="Food Donation" style="height: 5%; border-radius: 10px; margin-top: 20px;">
+    </section>
+  </div>
+  
+
+  <div id="how-it-works" class="page-content" style="display:none;">
+    <section class="how-it-works">
+      <h2>How It Works</h2>
+      <p>Our platform connects donors with people who need food. Here’s how it works:</p>
+      <ol>
+        <li><strong>Step 1:</strong> Donors, such as restaurants or individuals, sign up on our platform and list the surplus food they wish to donate. You can offer any food item, whether cooked meals or fresh produce.</li>
+        <li><strong>Step 2:</strong> Recipients, such as NGOs or individuals in need, browse the available food donations on the platform. They can filter by location, food type, or delivery preference.</li>
+        <li><strong>Step 3:</strong> Once the recipient finds a suitable donation, they can request the food. The platform facilitates safe and efficient delivery between the donor and recipient.</li>
+        <li><strong>Step 4:</strong> Donors receive feedback from recipients and can track their contributions to see the impact they’ve made!</li>
+      </ol>
+      <img src="istockphoto-1060352206-612x612.jpg" alt="How It Works" style="height: 5%; border-radius: 10px; margin-top: 20px;">
+    </section>
+  </div>
+  
+
+  <div id="donate" class="page-content" style="display:none;">
+    <section class="donate-form">
+      <h2>Donate Food</h2>
+      <p>It's easy to make a difference. Donate surplus food today and help feed those in need! Just fill out the form below to submit your donation details.</p>
+      <form id="donateForm">
+        <label for="foodType">Food Type</label>
+        <input type="text" id="foodType" name="foodType" required>
+  
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" required>
+  
+        <label for="pickupTime">Pickup Time</label>
+        <input type="datetime-local" id="pickupTime" name="pickupTime" required>
+  
+        <button type="submit">Submit Donation</button>
+      </form>
+      <img src="5e6c74f0-edae-464b-869b-27f4b0a71f0d.jpg" alt="Donate Food" style="height: 5%; border-radius: 10px; margin-top: 20px;">
+    </section>
+  </div>
+  
+
+  <div id="request" class="page-content" style="display:none;">
+    <section class="request-form">
+      <h2>Request Food</h2>
+      <p>If you or your organization is in need of food, you can request donations through our platform. Fill out the form below, and we’ll match you with available donations in your area.</p>
+      <form id="requestForm">
+        <label for="foodNeeded">Food Needed</label>
+        <input type="text" id="foodNeeded" name="foodNeeded" required>
+  
+        <label for="quantityNeeded">Quantity</label>
+        <input type="number" id="quantityNeeded" name="quantityNeeded" required>
+  
+        <label for="pickupTime">Pickup Time</label>
+        <input type="datetime-local" id="pickupTime" name="pickupTime" required>
+  
+        <button type="submit">Request Food</button>
+      </form>
+      <img src="4613f593-ae17-4bc7-b739-a5ae17edf77a.jpg" alt="Request Food" style="height: 5%; border-radius: 10px; margin-top: 20px;">
+    </section>
+  </div>
+  
+
+  <div id="contact" class="page-content" style="display:none;">
+    <section class="contact-form">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or need support, feel free to contact us using the form below. We're here to help!</p>
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+  
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+  
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+  
+        <button type="submit">Send Message</button>
+      </form>
+      <img src="istockphoto-1271752802-612x612.jpg" alt="Contact Us" style="height: 5%; border-radius: 10px; margin-top: 20px;">
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Food Donation Platform. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
